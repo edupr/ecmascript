@@ -65,3 +65,54 @@ console.log(globalLet);
 const a = 'b';
 a = 'c';
 console.log(a);
+
+
+let name2 = 'Oscar';
+let age2 = 30;
+
+// es5
+obj = { name2: name2, age2: age2 };
+// es6
+obj2 = { name2, age2 };
+console.log(obj2);
+console.log(obj);
+
+// Arrow Functions
+const names = [
+    { name: 'Oscar', age: 30 },
+    { name: 'Julian', age: 27 },
+];
+
+// es5
+let listOfNames = names.map(function(item) {
+    console.log(item.name);
+});
+
+// es6 Arrow Functions
+let listOfNames2 = names.map(item => console.log(item.name));
+
+const listOfNames3 = (name, age, country) => {
+    console.log(name, age, country);
+};
+
+const listOfNames4 = name => {
+    console.log(name);
+};
+
+const square = num => num * num;
+
+// Promises
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if (true) {
+            resolve('Hey!');
+        } else {
+            reject('Ups!');
+        }
+    });
+};
+
+helloPromise()
+    .then(response => console.log(response))
+    .then(() => console.log('This always executes'))
+    .catch(error => console.log(error));
