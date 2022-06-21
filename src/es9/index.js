@@ -7,13 +7,13 @@ const obj = {
 let { name, ...all } = obj;
 console.log(name, all); // Oscar { country: 'MX', age: 30 }
 
-const obj = {
+const obj2 = {
     name: 'Oscar',
     age: 32,
 };
 
 const obj1 = {
-    ...obj,
+    ...obj2,
     country: 'MX',
 };
 
